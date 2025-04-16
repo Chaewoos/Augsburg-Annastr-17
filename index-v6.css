@@ -12,7 +12,7 @@
 :root {
     --sd_color-white: #fff;
     --sd_color-black: #000;
-    --sd_font-size-h1: clamp(50px, 4.9vw, 85px);
+    --sd_font-size-h1: clamp(50px, 4.9vw, 80px);
     --sd_font-size-h2: 42px;
     --sd_font-size-h3: 25px;
     --sd_font-size-h4: clamp(16px, 1.1vw, 20px);
@@ -1129,11 +1129,15 @@ li {
         margin: var(--sd_space-s) 0px var(--sd_space-s) 0px;
     }
 
+    .bold-text {
+        font-weight: bold;
+    }
+    
+    
     .hbr-buttons {
         margin-top: var(--sd_space-s);
     }
     /* HERO-BLOCK *//* HERO-BLOCK */
-
     /* IMAGE-GALLERY-BLOCK *//* IMAGE-GALLERY-BLOCK */
     .igbi-row {
         display: flex;
