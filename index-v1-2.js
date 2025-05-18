@@ -82,3 +82,25 @@ document.addEventListener("DOMContentLoaded", function () {
       banner.style.display = "none"; // Banner ausblenden
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptButton = document.getElementById("accept-cookies");
+    const declineButton = document.getElementById("decline-cookies");
+  
+    const hasCookieDecision = document.cookie.split('; ').find(row => row.startsWith('cookiesAccepted='));
+  
+    if (!hasCookieDecision) {
+      banner.style.display = "flex";
+    }
+  
+    acceptButton.addEventListener("click", function () {
+      document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+      banner.style.display = "none";
+    });
+  
+    declineButton.addEventListener("click", function () {
+      document.cookie = "cookiesAccepted=false; path=/; max-age=" + 60 * 60 * 24 * 365;
+      banner.style.display = "none";
+    });
+  });
