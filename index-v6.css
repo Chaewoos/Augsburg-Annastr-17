@@ -713,7 +713,6 @@ li {
     display: flex;
     gap: var(--sd_space-s);
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .itbs-text a:not(.itbst-buttons a) {
